@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Login</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="booking.html">Book a Room</a>
+            <a href="index.html">About Us</a>
+            <a href="#contact">Contact Us</a>
+            <a href="register.html">Register</a>
+        </nav>
+    </header>
+
+    <main>
+        <form action="process_login.php" method="post">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <p><a href="reset_pw.html" class="forgot-password-link">Forgot Password?</a></p>
+            <button type="submit" class="submit-button">Login</button>
+        </form>
+
+        <form action="process_delete.php" method="post" onsubmit="return confirm('Are you sure you want to delete your account?');">
+            <input type="hidden" id="email" name="email" value="">
+            <button type="submit" class="delete-button">Delete Account</button>
+        </form>
+    </main>
+
+    <script>
+        document.querySelector("form[action='process_login.php'] #email").addEventListener('input', function() {
+            document.querySelector("form[action='process_delete.php'] #email").value = this.value;
+        });
+    </script>
+
+    <footer>
+        <section id="contact">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="booking.html">Book a Room</a>
+            <a href="#contact">Contact Us</a>
+            <a href="#about">About Us</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+        </nav>
+        <p>Address: 123 Luxury St, Colombo <br><br> Email: info@luxuryvilla.com <br><br> Phone: +94 740111689</p><br>
+        <p>&copy; 2023 Luxury Villa Booking</p>
+        </section> 
+    </footer>
+</body>
+</html>

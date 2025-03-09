@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Password</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Reset Password</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html">About Us</a>
+            <a href="#contact">Contact Us</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+
+    <main>
+        <p>Please enter your username, new password, and confirm your new password to reset it.</p>
+        <form action="process_update_pw.php" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="new_password">New Password:</label>
+            <input type="password" id="new_password" name="new_password" required>
+
+            <label for="confirm_password">Confirm Password:</label>
+            <input type="password" id="confirm_password" name="confirm_password" required>
+
+            <button type="submit" class="submit-button">Reset Password</button>
+        </form>
+    </main>
+
+    <footer>
+        <section id="contact">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="booking.html">Book a Room</a>
+            <a href="#contact">Contact Us</a>
+            <a href="#about">About Us</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+        </nav>
+        <p>Address: 123 Luxury St, Colombo <br><br> Email: info@luxuryvilla.com <br><br> Phone: +94 740111689</p><br>
+        <p>&copy; 2023 Luxury Villa Booking</p>
+        </section> 
+    </footer>
+</body>
+</html>
